@@ -8,7 +8,7 @@ const PostCategorySchema = (sequelize, DataTypes) =>{
     });
 
   PostCategoryTable.associate = ({Category, BlogPost}) =>{
-    BlogPost.belogsToMany(Category, {
+    BlogPost.belongsToMany(Category, {
       as: 'categories',
       
       foreignKey:'post_id',
@@ -16,7 +16,7 @@ const PostCategorySchema = (sequelize, DataTypes) =>{
       through: PostCategoryTable
     })
 
-    Category.belogsToMany(BlogPost, {
+    Category.belongsToMany(BlogPost, {
       as: 'posts',
       foreignKey:'category_id',
       otherKey:'post_id',

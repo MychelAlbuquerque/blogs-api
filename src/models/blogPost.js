@@ -5,7 +5,7 @@ const BlogPostSchema = (sequelize, DataTypes) =>{
         type:DataTypes.INTEGER,
         primaryKey: true,
       },
-      userId: DataTypes.INTERGER,
+      userId: DataTypes.INTEGER,
       title: DataTypes.STRING,
       content:DataTypes.STRING,
       published:DataTypes.DATE,
