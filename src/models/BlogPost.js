@@ -4,6 +4,7 @@ const BlogPostSchema = (sequelize, DataTypes) =>{
       id:{
         type:DataTypes.INTEGER,
         primaryKey: true,
+        autoIncrement: true,
       },
       userId: DataTypes.INTEGER,
       title: DataTypes.STRING,
@@ -12,7 +13,7 @@ const BlogPostSchema = (sequelize, DataTypes) =>{
       updated:DataTypes.DATE,
     },
     {
-      timestamps: true,
+      timestamps: false,
       tableName: "blog_posts",
       underscored: true
     }
